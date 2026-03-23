@@ -47,10 +47,10 @@
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnAleatorio = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbxFoto = new System.Windows.Forms.PictureBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxFoto)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -178,9 +178,9 @@
             // 
             // btnFoto
             // 
-            this.btnFoto.Location = new System.Drawing.Point(575, 389);
+            this.btnFoto.Location = new System.Drawing.Point(575, 390);
             this.btnFoto.Name = "btnFoto";
-            this.btnFoto.Size = new System.Drawing.Size(75, 23);
+            this.btnFoto.Size = new System.Drawing.Size(75, 31);
             this.btnFoto.TabIndex = 8;
             this.btnFoto.Text = "Selecionar";
             this.btnFoto.UseVisualStyleBackColor = true;
@@ -204,26 +204,27 @@
             this.btnAleatorio.TabIndex = 8;
             this.btnAleatorio.Text = "Gerar aleatório";
             this.btnAleatorio.UseVisualStyleBackColor = true;
+            this.btnAleatorio.Click += new System.EventHandler(this.btnAleatorio_Click);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(267, 390);
+            this.label9.Location = new System.Drawing.Point(267, 403);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(82, 18);
             this.label9.TabIndex = 6;
             this.label9.Text = "Credencial:";
             // 
-            // pictureBox1
+            // pbxFoto
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(437, 373);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(126, 73);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
+            this.pbxFoto.Image = ((System.Drawing.Image)(resources.GetObject("pbxFoto.Image")));
+            this.pbxFoto.Location = new System.Drawing.Point(437, 373);
+            this.pbxFoto.Name = "pbxFoto";
+            this.pbxFoto.Size = new System.Drawing.Size(126, 73);
+            this.pbxFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxFoto.TabIndex = 9;
+            this.pbxFoto.TabStop = false;
             // 
             // txtUsuario
             // 
@@ -247,7 +248,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(969, 594);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pbxFoto);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnAleatorio);
             this.Controls.Add(this.btnFoto);
@@ -270,8 +271,7 @@
             this.Controls.Add(this.txtConfirmarSenha);
             this.Name = "Cadastro";
             this.Text = "Cadastro";
-            this.Load += new System.EventHandler(this.Cadastro_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxFoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -297,7 +297,7 @@
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnAleatorio;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbxFoto;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Label label10;
     }
