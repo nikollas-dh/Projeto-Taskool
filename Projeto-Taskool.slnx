@@ -1,3 +1,9 @@
 <Solution>
-  <Project Path="Projeto-Taskool/Projeto-Taskool.csproj" Id="b73fc287-7569-4026-b9d5-ff4e7c804be6" />
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+  </Configurations>
+  <Project Path="Projeto-Taskool/Projeto-Taskool.csproj" Id="b73fc287-7569-4026-b9d5-ff4e7c804be6">
+    <Platform Solution="*|x64" Project="x64" />
+  </Project>
 </Solution>

@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,6 +19,12 @@ namespace Projeto_Taskool
         public Login()
         {
             InitializeComponent();
+
+           
+            //if (Control.IsKeyLocked(Keys.CapsLock))
+            //{
+            //    lblCaps.Visible = true;
+            //}
         }
 
         private void linkCadastro_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -33,13 +40,47 @@ namespace Projeto_Taskool
                 MessageBox.Show("Dados inválidos");
                 return;
             }
+            
+
+            if (usuario.Foto != null && usuario.Foto.Length > 0)
+            {
+                using (MemoryStream ms = new MemoryStream(usuario.Foto))
+                {
+                    pbxFoto.Image = Image.FromStream(ms);
+                }
+            }
+
             MessageBox.Show("Olá, " + usuario.Nome);
-            new TelaUsuario().Show();
+            new TelaUsuario(usuario).Show();
         }
 
         private void linkTeclado_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-                       
+            try
+            {
+                Process.Start("C:\\WINDOWS\\system32\\osk.exe");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não foi possível abrir o teclado virtual: " + ex.Message);
+            }
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (Control.IsKeyLocked(Keys.CapsLock))
+            {
+                lblCaps.Visible = true;
+            }
+            else {
+                lblCaps.Visible = false;
+
+            }
         }
     }
 }

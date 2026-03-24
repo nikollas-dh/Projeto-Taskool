@@ -63,7 +63,7 @@ namespace Projeto_Taskool
             banco.SaveChanges();
 
             MessageBox.Show("Usuário criado com sucesso");
-            new Login().Show();
+            this.Close();
         }
         private byte[] ConverterImagemParaByte(Image imagem)
         {
@@ -136,9 +136,27 @@ namespace Projeto_Taskool
             }
         }
 
-     
-       
-       
-        
+        private void Cadastro_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtConfirmarSenha_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (Control.IsKeyLocked(Keys.CapsLock))
+            {
+                lblCaps.Visible = true;
+            }
+            else
+            {
+                lblCaps.Visible = false;
+
+            }
+        }
     }
 }

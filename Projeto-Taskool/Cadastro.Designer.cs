@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cadastro));
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -50,6 +51,8 @@
             this.pbxFoto = new System.Windows.Forms.PictureBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lblCaps = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbxFoto)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,28 +81,29 @@
             this.txtNovaSenha.Location = new System.Drawing.Point(360, 254);
             this.txtNovaSenha.Name = "txtNovaSenha";
             this.txtNovaSenha.Size = new System.Drawing.Size(290, 20);
-            this.txtNovaSenha.TabIndex = 3;
+            this.txtNovaSenha.TabIndex = 6;
             // 
             // txtConfirmarSenha
             // 
             this.txtConfirmarSenha.Location = new System.Drawing.Point(360, 290);
             this.txtConfirmarSenha.Name = "txtConfirmarSenha";
             this.txtConfirmarSenha.Size = new System.Drawing.Size(290, 20);
-            this.txtConfirmarSenha.TabIndex = 4;
+            this.txtConfirmarSenha.TabIndex = 7;
+            this.txtConfirmarSenha.TextChanged += new System.EventHandler(this.txtConfirmarSenha_TextChanged);
             // 
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(360, 160);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(290, 20);
-            this.txtEmail.TabIndex = 4;
+            this.txtEmail.TabIndex = 2;
             // 
             // txtNome
             // 
             this.txtNome.Location = new System.Drawing.Point(360, 124);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(290, 20);
-            this.txtNome.TabIndex = 3;
+            this.txtNome.TabIndex = 1;
             // 
             // label1
             // 
@@ -126,7 +130,7 @@
             this.txtTelefone.Location = new System.Drawing.Point(360, 228);
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(290, 20);
-            this.txtTelefone.TabIndex = 4;
+            this.txtTelefone.TabIndex = 5;
             // 
             // label5
             // 
@@ -164,7 +168,7 @@
             this.dtNascimento.Location = new System.Drawing.Point(360, 327);
             this.dtNascimento.Name = "dtNascimento";
             this.dtNascimento.Size = new System.Drawing.Size(153, 20);
-            this.dtNascimento.TabIndex = 7;
+            this.dtNascimento.TabIndex = 8;
             // 
             // label8
             // 
@@ -181,7 +185,7 @@
             this.btnFoto.Location = new System.Drawing.Point(575, 390);
             this.btnFoto.Name = "btnFoto";
             this.btnFoto.Size = new System.Drawing.Size(75, 31);
-            this.btnFoto.TabIndex = 8;
+            this.btnFoto.TabIndex = 9;
             this.btnFoto.Text = "Selecionar";
             this.btnFoto.UseVisualStyleBackColor = true;
             this.btnFoto.Click += new System.EventHandler(this.btnFoto_Click);
@@ -191,7 +195,7 @@
             this.btnSalvar.Location = new System.Drawing.Point(418, 468);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(168, 36);
-            this.btnSalvar.TabIndex = 8;
+            this.btnSalvar.TabIndex = 10;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
@@ -201,7 +205,7 @@
             this.btnAleatorio.Location = new System.Drawing.Point(697, 196);
             this.btnAleatorio.Name = "btnAleatorio";
             this.btnAleatorio.Size = new System.Drawing.Size(123, 30);
-            this.btnAleatorio.TabIndex = 8;
+            this.btnAleatorio.TabIndex = 4;
             this.btnAleatorio.Text = "Gerar aleatório";
             this.btnAleatorio.UseVisualStyleBackColor = true;
             this.btnAleatorio.Click += new System.EventHandler(this.btnAleatorio_Click);
@@ -231,7 +235,7 @@
             this.txtUsuario.Location = new System.Drawing.Point(360, 196);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(290, 20);
-            this.txtUsuario.TabIndex = 4;
+            this.txtUsuario.TabIndex = 3;
             // 
             // label10
             // 
@@ -243,11 +247,30 @@
             this.label10.TabIndex = 6;
             this.label10.Text = "Usuário:";
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // lblCaps
+            // 
+            this.lblCaps.AutoSize = true;
+            this.lblCaps.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCaps.ForeColor = System.Drawing.Color.Red;
+            this.lblCaps.Location = new System.Drawing.Point(694, 164);
+            this.lblCaps.Name = "lblCaps";
+            this.lblCaps.Size = new System.Drawing.Size(135, 17);
+            this.lblCaps.TabIndex = 13;
+            this.lblCaps.Text = "CAPS LOCK ativado";
+            this.lblCaps.Visible = false;
+            // 
             // Cadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(969, 594);
+            this.Controls.Add(this.lblCaps);
             this.Controls.Add(this.pbxFoto);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnAleatorio);
@@ -271,6 +294,7 @@
             this.Controls.Add(this.txtConfirmarSenha);
             this.Name = "Cadastro";
             this.Text = "Cadastro";
+            this.Load += new System.EventHandler(this.Cadastro_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxFoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -300,5 +324,7 @@
         private System.Windows.Forms.PictureBox pbxFoto;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label lblCaps;
     }
 }
