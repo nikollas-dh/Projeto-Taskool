@@ -48,8 +48,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.caixa = new System.Windows.Forms.Panel();
-            this.linkLabel5 = new System.Windows.Forms.LinkLabel();
             this.linkLabel6 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel5 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pbxFoto)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -58,6 +58,7 @@
             // 
             // lblHoras
             // 
+            this.lblHoras.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblHoras.AutoSize = true;
             this.lblHoras.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHoras.Location = new System.Drawing.Point(208, 63);
@@ -72,6 +73,7 @@
             // 
             // lblMensagem
             // 
+            this.lblMensagem.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblMensagem.AutoSize = true;
             this.lblMensagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMensagem.Location = new System.Drawing.Point(211, 112);
@@ -83,6 +85,7 @@
             // 
             // pbxFoto
             // 
+            this.pbxFoto.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pbxFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbxFoto.Image = ((System.Drawing.Image)(resources.GetObject("pbxFoto.Image")));
             this.pbxFoto.Location = new System.Drawing.Point(811, 13);
@@ -95,6 +98,7 @@
             // 
             // btnIngles
             // 
+            this.btnIngles.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnIngles.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btnIngles.Location = new System.Drawing.Point(874, 518);
             this.btnIngles.Name = "btnIngles";
@@ -106,6 +110,7 @@
             // 
             // btnPortugues
             // 
+            this.btnPortugues.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnPortugues.BackColor = System.Drawing.Color.LightGreen;
             this.btnPortugues.Location = new System.Drawing.Point(810, 518);
             this.btnPortugues.Name = "btnPortugues";
@@ -117,6 +122,7 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label3);
@@ -200,6 +206,7 @@
             // 
             // panel3
             // 
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel3.Location = new System.Drawing.Point(0, 92);
             this.panel3.Name = "panel3";
@@ -208,6 +215,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(212, 220);
@@ -219,6 +227,7 @@
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(225, 250);
@@ -229,6 +238,7 @@
             // 
             // caixa
             // 
+            this.caixa.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.caixa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.caixa.Controls.Add(this.linkLabel6);
             this.caixa.Controls.Add(this.linkLabel5);
@@ -238,6 +248,16 @@
             this.caixa.TabIndex = 17;
             this.caixa.Visible = false;
             this.caixa.Paint += new System.Windows.Forms.PaintEventHandler(this.caixa_Paint);
+            // 
+            // linkLabel6
+            // 
+            this.linkLabel6.AutoSize = true;
+            this.linkLabel6.Location = new System.Drawing.Point(45, 27);
+            this.linkLabel6.Name = "linkLabel6";
+            this.linkLabel6.Size = new System.Drawing.Size(34, 13);
+            this.linkLabel6.TabIndex = 0;
+            this.linkLabel6.TabStop = true;
+            this.linkLabel6.Text = "Editar";
             // 
             // linkLabel5
             // 
@@ -249,16 +269,6 @@
             this.linkLabel5.TabStop = true;
             this.linkLabel5.Text = "Sair";
             this.linkLabel5.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel5_LinkClicked);
-            // 
-            // linkLabel6
-            // 
-            this.linkLabel6.AutoSize = true;
-            this.linkLabel6.Location = new System.Drawing.Point(45, 27);
-            this.linkLabel6.Name = "linkLabel6";
-            this.linkLabel6.Size = new System.Drawing.Size(34, 13);
-            this.linkLabel6.TabIndex = 0;
-            this.linkLabel6.TabStop = true;
-            this.linkLabel6.Text = "Editar";
             // 
             // TelaUsuario
             // 
